@@ -1,0 +1,18 @@
+.categories {
+  display: grid;
+  margin-top: 13px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+  &__wrap {
+    &__title {
+      font-size: 12px;
+      color: #fff;
+    }
+    svg {
+      width: 32px;
+      fill: #fff;
+      height: 32px;
+      justify-self: center;
+    }
+  }
+}
