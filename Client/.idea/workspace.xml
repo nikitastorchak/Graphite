@@ -2,44 +2,97 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9af143c5-2ffd-462f-9059-295779e2dd92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/Icon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Briefcase.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Cart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Catalog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Crown.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Exit.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/FAQ.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/FindIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Fire.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Like.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Medal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Plane.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/User.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navbar/NavbarStyles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NewProducts/NewProducts.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/globalStyles/GlobalStyles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Icon/Icon.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Icon/patterns/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modals/SearchModal/SearchModalStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modals/SearchModal/SearchModalStyles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductsByCategories/ProductsByCategories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductsByCategories/ProductsByCategories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/SearchStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/SearchStyles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Cart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Cart.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Exit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Exit.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Home.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Home.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Like.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Like.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/User.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/User.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/productActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/productActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/graphite.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphite.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Banner/Banner.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Button/Button.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Card/Card.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Cards/CardsStyles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/Icon.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Briefcase.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Cart.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Catalog.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Crown.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Exit.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/FAQ.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Find.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/FindIcon.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Fire.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Home.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Like.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Medal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Plane.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/User.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/test.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Loading/Loading.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories/Categories.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories/Categories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modals/CatalogModal/CatalogModal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modals/SearchModal/SearchModal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modals/SearchModal/SearchModalStyles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/NavbarStyles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewProducts/NewProducts.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductsByCategories/ProductsByCategories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductsByCategories/ProductsByCategoriesStyles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/SearchStyles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/Colors.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/globalStyles/GlobalStyles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Briefcase.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Cart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Catalog.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Crown.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Exit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/FAQ.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/FindIcon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Fire.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Home.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Like.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Medal.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Plane.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/User.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/NotFound/PageNotFound.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/react-app-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/UserService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/http/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/userHandlers/userHandlers.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/productActions.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/productReducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/products.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,21 +122,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/user/Desktop/Graphite/Client&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/user/Public/Graphite/graphite/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/user/Desktop/Graphite/Client/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/user/Desktop/Graphite",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/user/Public/Graphite/graphite/node_modules/prettier",
+    "settings.editor.selected.configurable": "editing.templates",
+    "ts.external.directory.path": "/home/user/Desktop/Graphite/Client/node_modules/typescript/lib"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -124,7 +177,7 @@
       <workItem from="1653288260950" duration="10402000" />
       <workItem from="1653372574188" duration="24252000" />
       <workItem from="1653459403126" duration="3885000" />
-      <workItem from="1653546031443" duration="8923000" />
+      <workItem from="1653546031443" duration="19268000" />
     </task>
     <servers />
   </component>
@@ -145,12 +198,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/common/Icon/Icon.tsx</url>
-          <line>12</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/common/Cards/Cards.tsx</url>
           <line>25</line>
