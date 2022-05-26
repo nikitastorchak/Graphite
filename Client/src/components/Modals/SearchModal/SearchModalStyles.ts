@@ -17,9 +17,11 @@ export const ModalWrap = styled.div<ModalWrapProps>`
   border-radius: 0 0 5px 5px;
   height: auto;
   z-index: 1;
-  top: ${(props) => (props.show ? "60px" : "-100vh")};
-  opacity: ${(props) => (props.show ? "1" : "0.8")};
-  transition: 0.3s ease;
+  min-height: ${(props) => (props.show ? "10" : "0")};
+  // top: 30px;
+  top: ${(props) => (props.show ? "60px" : "50px")};
+  opacity: ${(props) => (props.show ? "1" : "0")};
+  transition: 0.1s linear;
 `;
 export const ModalContent = styled.div`
   background: transparent;

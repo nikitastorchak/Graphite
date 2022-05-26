@@ -8,26 +8,16 @@ import {
   Price,
   Wrap,
 } from "./ProductsByCategoriesStyles";
+import Cards from "../../common/Cards/Cards";
+import { Title } from "../../globalStyles/GlobalStyles";
 
 const ProductsByCategories = ({ productsByCategory }: any) => (
   <>
     {productsByCategory?.length > 0 &&
       productsByCategory.map((item: { name: String; products: any }) => (
         <>
-          <CategoryName>{item.name}</CategoryName>
-          <Wrap>
-            {item.products?.map((product: any) => (
-              <Card>
-                <PreviewWrap>
-                  <Preview src={product.preview} />
-                </PreviewWrap>
-
-                <CardName>{product.name}</CardName>
-                <Price>{product.price}&thinsp;₽</Price>
-                <Button>В корзину</Button>
-              </Card>
-            ))}
-          </Wrap>
+          <Title>{item.name}</Title>
+          <Cards products={item.products} />
         </>
       ))}
   </>

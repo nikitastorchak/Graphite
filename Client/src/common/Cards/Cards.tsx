@@ -1,5 +1,3 @@
-import { useSelector } from "../../store";
-
 import {
   Button,
   Card,
@@ -10,43 +8,20 @@ import {
   Wrap,
 } from "./CardsStyles";
 
-const Cards = ({ category }: any) => {
-  const { products } = useSelector((state) => state.products);
+const Cards = ({ products }: any) => (
+  <Wrap>
+    {products?.map((product: any) => (
+      <Card>
+        <PreviewWrap>
+          <Preview src={product.preview} />
+        </PreviewWrap>
 
-  return (
-    <Wrap>
-      {true &&
-        products?.map((item) => {
-          if (category) {
-            if (item.category === category) {
-              return (
-                <Card>
-                  <PreviewWrap>
-                    <Preview src={item.preview} />
-                  </PreviewWrap>
-
-                  <CardName>{item.name}</CardName>
-                  <Price>{item.price}&thinsp;₽</Price>
-                  <Button>В корзину</Button>
-                </Card>
-              );
-            }
-          } else {
-            return (
-              <Card>
-                <PreviewWrap>
-                  <Preview src={item.preview} />
-                </PreviewWrap>
-
-                <CardName>{item.name}</CardName>
-                <Price>{item.price}&thinsp;₽</Price>
-                <Button>В корзину</Button>
-              </Card>
-            );
-          }
-        })}
-    </Wrap>
-  );
-};
+        <CardName>{product.name}</CardName>
+        <Price>{product.price}&thinsp;₽</Price>
+        <Button>В корзину</Button>
+      </Card>
+    ))}
+  </Wrap>
+);
 
 export default Cards;

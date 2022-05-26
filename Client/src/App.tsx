@@ -1,7 +1,7 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import styled from "styled-components";
 
-import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar";
 import Main from "./pages/Main/Main";
 import PageNotFound from "./pages/NotFound/PageNotFound";
 import Cart from "./pages/Cart/Cart";
@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Search from "./components/Search/Search";
 
 import "./App.css";
+import Catalog from "./pages/Catalog/Catalog";
 
 const Layout = styled.div`
   text-align: center;
@@ -22,12 +23,12 @@ const Wrapper = styled.div`
 
 const App = () => (
   <Wrapper>
-    <Header />
+    <Navbar />
     <Layout>
       <Search />
       <Switch>
         <Route exact path="/" component={Main} />
-        <Route path="/catalog" component={PageNotFound} />
+        <Route path="/catalog" component={Catalog} />
         <Route path="/cart" component={Cart} />
         <Route path="/favorite" component={PageNotFound} />
         <Route path="/profile" component={PageNotFound} />

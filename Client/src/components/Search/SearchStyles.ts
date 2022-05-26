@@ -10,7 +10,6 @@ export const SearchWrap = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     align-content: center;
- 
    border-radius: 4px;
     svg {
     width: 20px;
@@ -36,6 +35,7 @@ export const Wrapper = styled.div<any>`
   border-radius: 0 0 5px 5px;
   div${SearchWrap} {
     width: ${(props) => (props.show ? "70%" : "100%")};
+    transition: 0.2s;
   }
 `;
 export const SearchField = styled.input`
@@ -59,12 +59,8 @@ export const IconsWrap = styled.div`
   flex-direction: row;
   width: auto;
   svg {
-    width: 20px;
-    height: 20px;
     align-self: center;
     margin: 0 10px;
-    color: ${SECOND_COLOR};
-    fill: ${SECOND_COLOR};
   }
 `;
 export const CatalogWrap = styled.button`

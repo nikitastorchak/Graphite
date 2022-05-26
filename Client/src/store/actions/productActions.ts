@@ -60,6 +60,29 @@ export const getResourcesAction = (): AppThunk => async (dispatch) => {
   }
 };
 
+export const getNewProducts = (): AppThunk => async () => {
+  try {
+    const response = await UserService.get("showNewProducts");
+    return response;
+  } catch (e: any) {
+    return e.message;
+  }
+};
+
+export const getResourcesForMainPage = (): AppThunk => async (dispatch) => {
+  try {
+    const newProducts = await UserService.get("showNewProducts");
+    const productsByCategories = await UserService.get("showProductsMainPage");
+    const products = await UserService.get("showProducts");
+    dispatch(setProducts(products?.data));
+    const categories = await UserService.get("showCategories");
+    dispatch(setCategories(categories.data));
+    return { newProducts, productsByCategories };
+  } catch (e: any) {
+    return e.message;
+  }
+};
+
 export const getProductsForMainPage = (): AppThunk => async () => {
   try {
     const response = await UserService.get("showProductsMainPage");

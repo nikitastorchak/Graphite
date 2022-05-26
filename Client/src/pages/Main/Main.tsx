@@ -10,8 +10,9 @@ import { useDispatch } from "../../store";
 import {
   getProductsForMainPage,
   getResourcesAction,
+  getResourcesForMainPage,
 } from "../../store/actions/productActions";
-import Icon from "../../common/Icon/Icon";
+import NewProducts from "../../components/NewProducts/NewProducts";
 
 const Wrapper = styled.div`
   padding: 15px;
@@ -20,13 +21,15 @@ const Wrapper = styled.div`
 const Main = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [productsByCategory, setProductsByCategory] = useState<any>([]);
+  const [newProducts, setNewProducts] = useState<any>([]);
   const dispatch = useDispatch();
 
   const getProducts = async () => {
     setIsLoading(true);
-    const response: any = await dispatch(getProductsForMainPage());
-    await dispatch(getResourcesAction());
-    setProductsByCategory(response?.data);
+    const response: any = await dispatch(getResourcesForMainPage());
+    console.log(response);
+    setProductsByCategory(response?.productsByCategories.data);
+    setNewProducts(response?.newProducts.data);
     setIsLoading(false);
   };
 
@@ -36,20 +39,19 @@ const Main = () => {
 
   return (
     <>
-      {!isLoading ? (
+      {isLoading ? (
+        <Loading />
+      ) : (
         <Wrapper>
-          <Icon name={"test"} />
           <Banner />
-          <Cards />
+          <NewProducts newProducts={newProducts} />
           <ProductsByCategories productsByCategory={productsByCategory} />
         </Wrapper>
-      ) : (
-        <Loading />
       )}
     </>
   );
 };
 
-//   //Todo посмотреть правило еслинта для зависимостей
+//Todo посмотреть правило еслинта для зависимостей
 
 export default Main;

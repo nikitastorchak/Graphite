@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9af143c5-2ffd-462f-9059-295779e2dd92" name="Changes" comment="" />
+    <list default="true" id="9af143c5-2ffd-462f-9059-295779e2dd92" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/Icon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Briefcase.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Cart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Catalog.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Crown.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Exit.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/FAQ.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/FindIcon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Fire.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Like.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Medal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Plane.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/User.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navbar/NavbarStyles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/NewProducts/NewProducts.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/globalStyles/GlobalStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/Icon.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Icon/patterns/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modals/SearchModal/SearchModalStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modals/SearchModal/SearchModalStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductsByCategories/ProductsByCategories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductsByCategories/ProductsByCategories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/SearchStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/SearchStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Cart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Cart.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Exit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Exit.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Home.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Home.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Like.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Like.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/User.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/User.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/productActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/productActions.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,34 +56,34 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28k6ZpHWnQFstoPePohXphiaPvw" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/user/Public/Graphite/graphite/src/common/Icon/data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/home/user/Public/Graphite/graphite/node_modules/prettier",
-    "settings.editor.selected.configurable": "editing.templates",
-    "ts.external.directory.path": "/home/user/Public/Graphite/graphite/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/user/Desktop/Graphite/Client&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/user/Public/Graphite/graphite/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/user/Desktop/Graphite/Client/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -58,6 +97,7 @@
       <recent name="$PROJECT_DIR$/src/common/Icon/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/common/Icon/patterns/data" />
       <recent name="$PROJECT_DIR$/src/common/Icon/patterns" />
       <recent name="$PROJECT_DIR$/src/components/Modals" />
     </key>
@@ -83,6 +123,8 @@
       <workItem from="1653027318497" duration="14612000" />
       <workItem from="1653288260950" duration="10402000" />
       <workItem from="1653372574188" duration="24252000" />
+      <workItem from="1653459403126" duration="3885000" />
+      <workItem from="1653546031443" duration="8923000" />
     </task>
     <servers />
   </component>
@@ -104,10 +146,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/pages/Main/Main.tsx</url>
-          <line>46</line>
+          <url>file://$PROJECT_DIR$/src/common/Icon/Icon.tsx</url>
+          <line>12</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/common/Cards/Cards.tsx</url>
+          <line>25</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

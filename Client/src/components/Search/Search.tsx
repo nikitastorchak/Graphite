@@ -18,6 +18,7 @@ import { ReactComponent as Catalog } from "../../images/Catalog.svg";
 import { ReactComponent as FindIcon } from "../../images/FindIcon.svg";
 import { ReactComponent as FAQ } from "../../images/FAQ.svg";
 import { ReactComponent as Exit } from "../../images/Exit.svg";
+import Icon from "../../common/Icon/Icon";
 
 interface FoundProducts {}
 interface FoundCategories {}
@@ -45,7 +46,7 @@ const Search = () => {
   return (
     <Wrapper show={isSearchActive}>
       <SearchWrap>
-        <FindIcon />
+        <Icon name="find" color="#000" />
         <SearchField
           placeholder="Искать на Graphite"
           value={searchValue}
@@ -59,7 +60,7 @@ const Search = () => {
               setSearchValue("");
             }}
           >
-            <Exit />
+            <Icon name="exit" color="#fff" />
           </ModalExit>
         ) : (
           <>
@@ -68,9 +69,9 @@ const Search = () => {
                 setIsCatalogActive(true);
               }}
             >
-              <Catalog />
+              <Icon name="catalog" color="#fff" />
             </CatalogWrap>
-            <FAQ />
+            <Icon name="faq" color="#fff" />
           </>
         )}
       </IconsWrap>
