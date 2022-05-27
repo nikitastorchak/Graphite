@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:ital,wght@0,400;1,300;1,400;1,600&display=swap');
+.App {
+  height: 100vh;
+}
+body {
+  background: linear-gradient(137deg, rgba(228,231,255,1) 0%, rgba(228,227,255,1) 44%, rgba(228,240,255,1) 100%);
+  background-attachment: fixed;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+
+  }
+  50% {
+    transform: rotate(180deg);
+
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes gradient {
+  0% {
+    background-color: #ffc3c3;
+  }
+  15% {
+    background-color: #f6c3ff;
+  }
+  30% {
+    background-color: #c3cdff;
+  }
+  45% {
+    background-color: #c3f1ff;
+  }
+  60% {
+    background-color: #c9ffc3;
+  }
+  75% {
+    background-color: #f0ffc3;
+  }
+  90% {
+    background-color: #ffeac3;
+  }
+  100% {
+    background-color: #ffc3c3;
+  }
+}

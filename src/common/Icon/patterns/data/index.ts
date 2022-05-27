@@ -1,0 +1,15 @@
+export { default as test } from "./test";
+export { default as briefcase } from "./Briefcase";
+export { default as cart } from "./Cart";
+export { default as catalog } from "./Catalog";
+export { default as crown } from "./Crown";
+export { default as exit } from "./Exit";
+export { default as faq } from "./FAQ";
+export { default as find } from "./Find";
+export { default as fire } from "./Fire";
+export { default as home } from "./Home";
+export { default as like } from "./Like";
+export { default as medal } from "./Medal";
+export { default as plane } from "./Plane";
+export { default as user } from "./User";
+export { default as buy } from "./Buy";
