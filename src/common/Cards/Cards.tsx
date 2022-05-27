@@ -1,3 +1,6 @@
+import uniq from "lodash/uniq";
+import { Product } from "../../services/ProductsHandlers";
+
 import {
   Button,
   Card,
@@ -9,22 +12,34 @@ import {
 } from "./CardsStyles";
 import Icon from "../Icon/Icon";
 
-const Cards = ({ products }: any) => (
-  <Wrap>
-    {products?.map((product: any) => (
-      <Card>
-        <PreviewWrap>
-          <Preview src={product.preview} />
-        </PreviewWrap>
+interface CardsProps {
+  products: Product[];
+}
 
-        <CardName>{product.name}</CardName>
-        <Price>{product.price}&thinsp;₽</Price>
-        <Button>
-          <Icon name={"buy"} />
-        </Button>
-      </Card>
-    ))}
-  </Wrap>
-);
+const Cards = ({ products }: CardsProps) => {
+  const addToCart = (id: string) => {
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    cart.push(id);
+    const uniqueCart = uniq(cart);
+    localStorage.setItem("cart", JSON.stringify(uniqueCart));
+  };
+
+  return (
+    <Wrap>
+      {products?.map((product: any, index: number) => (
+        <Card key={`card-${index}`}>
+          <PreviewWrap>
+            <Preview src={product.preview} />
+          </PreviewWrap>
+          <CardName>{product.name}</CardName>
+          <Price>{product.price}&thinsp;₽</Price>
+          <Button onClick={() => addToCart(product._id)}>
+            <Icon name="buy" color="#828bac" />
+          </Button>
+        </Card>
+      ))}
+    </Wrap>
+  );
+};
 
 export default Cards;

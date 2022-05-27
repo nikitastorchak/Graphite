@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, ChangeEventHandler, useEffect, useState } from "react";
 import { useDispatch } from "../../store";
 
 import SearchModal from "../Modals/SearchModal/SearchModal";
@@ -34,7 +34,7 @@ const Search = () => {
   const searchValueHandler = (value: string) => setSearchValue(value);
   const catalogModalHandler = (value: boolean) => setIsCatalogActive(value);
 
-  const searchHandler = async (value: any) => {
+  const searchHandler = async (value: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(value.target.value);
     const searchResult = await dispatch(
       searchProducts({ name: value.target.value })

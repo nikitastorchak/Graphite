@@ -6,14 +6,17 @@ export const Wrap = styled.div`
   overflow: scroll;
   scroll-snap-type: x mandatory;
   white-space: nowrap;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 `;
 export const Card = styled.div`
   display: flex;
   flex-shrink: 0;
   scroll-snap-align: center;
-  flex-basis: 30%;
-  margin: 7px;
-  max-width: 30%;
+  flex-basis: 46%;
+  margin: 2%;
+  max-width: 46%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -69,15 +72,18 @@ export const Price = styled.p`
   line-height: 26px;
 `;
 export const Button = styled.button`
-  width: fit-content;
-
-  background: transparent;
-
+  width: 50px;
+  background-color: #262434;
+  height: 50px;
+  padding: 0;
+  align-items: center;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
   border: none;
-  border-radius: 50%;
+
   color: #fff;
   margin-top: 10px;
-
   align-self: center;
 `;
 export const LoadingTrack = styled.div`

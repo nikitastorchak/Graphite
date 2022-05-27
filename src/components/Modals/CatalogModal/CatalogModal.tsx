@@ -28,8 +28,10 @@ const CatalogModal = ({ isCatalogActive, setIsCatalogActive }: any) => {
       </ModalTitleWrap>
 
       <ModalContent>
-        {categories.map((category) => (
-          <CategoryBlock>{category.name}</CategoryBlock>
+        {categories.map((category, index) => (
+          <CategoryBlock key={`categoryBlock-${index}`}>
+            {category.name}
+          </CategoryBlock>
         ))}
       </ModalContent>
     </ModalWrap>

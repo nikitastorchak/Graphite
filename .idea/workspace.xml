@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9af143c5-2ffd-462f-9059-295779e2dd92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Buy.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/ProductsHandlers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Cards/CardsStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Cards/CardsStyles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/Buy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Buy.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modals/CatalogModal/CatalogModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modals/CatalogModal/CatalogModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewProducts/NewProducts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewProducts/NewProducts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductsByCategories/ProductsByCategories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductsByCategories/ProductsByCategories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/IconsProps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/IconsProps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +27,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -40,21 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/user/Desktop/GraphiteBack",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/home/user/Public/Graphite/graphite/node_modules/prettier",
-    "settings.editor.selected.configurable": "editing.templates",
-    "ts.external.directory.path": "/home/user/Desktop/Graphite/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/user/Desktop/GraphiteBack&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/user/Public/Graphite/graphite/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/user/Desktop/Graphite/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
