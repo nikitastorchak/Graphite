@@ -23,7 +23,7 @@ coverage
 *.lcov
 
 #IntelIJ files
-.idea
+.idea/
 
 # nyc test coverage
 .nyc_output

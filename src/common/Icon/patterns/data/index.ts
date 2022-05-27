@@ -12,3 +12,4 @@ export { default as like } from "./Like";
 export { default as medal } from "./Medal";
 export { default as plane } from "./Plane";
 export { default as user } from "./User";
+export { default as buy } from "./Buy";

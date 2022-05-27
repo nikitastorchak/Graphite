@@ -55,3 +55,32 @@ body {
     opacity: 1;
   }
 }
+
+
+
+@keyframes gradient {
+  0% {
+    background-color: #ffc3c3;
+  }
+  15% {
+    background-color: #f6c3ff;
+  }
+  30% {
+    background-color: #c3cdff;
+  }
+  45% {
+    background-color: #c3f1ff;
+  }
+  60% {
+    background-color: #c9ffc3;
+  }
+  75% {
+    background-color: #f0ffc3;
+  }
+  90% {
+    background-color: #ffeac3;
+  }
+  100% {
+    background-color: #ffc3c3;
+  }
+}

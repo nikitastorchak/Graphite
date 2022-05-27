@@ -7,6 +7,7 @@ import {
   Price,
   Wrap,
 } from "./CardsStyles";
+import Icon from "../Icon/Icon";
 
 const Cards = ({ products }: any) => (
   <Wrap>
@@ -18,7 +19,9 @@ const Cards = ({ products }: any) => (
 
         <CardName>{product.name}</CardName>
         <Price>{product.price}&thinsp;₽</Price>
-        <Button>В корзину</Button>
+        <Button>
+          <Icon name={"buy"} />
+        </Button>
       </Card>
     ))}
   </Wrap>

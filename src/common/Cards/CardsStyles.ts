@@ -70,12 +70,14 @@ export const Price = styled.p`
 `;
 export const Button = styled.button`
   width: fit-content;
-  background-color: ${(props) => props.theme.mainColor};
+
+  background: transparent;
+
   border: none;
-  border-radius: 5px;
+  border-radius: 50%;
   color: #fff;
   margin-top: 10px;
-  padding: 10px 15px;
+
   align-self: center;
 `;
 export const LoadingTrack = styled.div`

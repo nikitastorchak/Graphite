@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9af143c5-2ffd-462f-9059-295779e2dd92" name="Changes" comment="" />
+    <list default="true" id="9af143c5-2ffd-462f-9059-295779e2dd92" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Buy.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Cards/CardsStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Cards/CardsStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -36,13 +46,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/user/Desktop/Graphite",
+    "last_opened_file_path": "/home/user/Desktop/GraphiteBack",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/home/user/Public/Graphite/graphite/node_modules/prettier",
     "settings.editor.selected.configurable": "editing.templates",
-    "ts.external.directory.path": "/home/user/Desktop/Graphite/Client/node_modules/typescript/lib"
+    "ts.external.directory.path": "/home/user/Desktop/Graphite/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="ReactDesignerToolWindowState">
@@ -87,6 +97,7 @@
       <workItem from="1653459403126" duration="3885000" />
       <workItem from="1653546031443" duration="19021000" />
       <workItem from="1653575688571" duration="316000" />
+      <workItem from="1653632544853" duration="3384000" />
     </task>
     <servers />
   </component>
@@ -109,7 +120,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/common/Cards/Cards.tsx</url>
-          <line>25</line>
+          <line>28</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
