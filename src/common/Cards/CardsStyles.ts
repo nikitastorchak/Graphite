@@ -42,18 +42,27 @@ export const Preview = styled.img`
 `;
 export const PreviewWrap = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   box-shadow: 0 0px 4px 4px #121212;
-  background: linear-gradient(
-    137deg,
-    rgba(228, 231, 255, 1) 0%,
-    rgba(228, 227, 255, 1) 44%,
-    rgba(228, 240, 255, 1) 100%
-  );
+  background-color: #262434;
+  color: #fff;
+  white-space: initial;
   border-radius: 7px;
+  svg {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    top: 50;
+    left: 50;
+  }
   ::after {
     content: "";
     display: block;
+    border: none;
+    outline: none;
     padding-bottom: 100%;
   }
   img {
@@ -81,10 +90,18 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   border: none;
-
+  box-shadow: 0 0 4px 4px #00000026;
   color: #fff;
   margin-top: 10px;
   align-self: center;
+  transition: 0.2s;
+  :hover {
+    transition: 0.2s;
+    background-color: #3456ff;
+    svg {
+      fill: #fff;
+    }
+  }
 `;
 export const LoadingTrack = styled.div`
   width: 50px;

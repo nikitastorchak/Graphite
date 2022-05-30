@@ -3,12 +3,12 @@ import { useDispatch } from "../../store";
 import styled from "styled-components";
 
 const Title = styled.h2`
-  font-style: bolder;
+  font-style: bold;
   color: #fff;
   margin: 0;
 `;
 const ProductId = styled.p`
-  font-style: bolder;
+  font-style: bold;
   color: #fff;
 `;
 
@@ -17,7 +17,7 @@ const Cart = () => {
   const dispatch = useDispatch();
   return (
     <>
-      {orders ? (
+      {orders.length > 0 ? (
         <>
           <Title>Корзина</Title>
           {orders.map((id: string) => (

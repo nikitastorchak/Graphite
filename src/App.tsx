@@ -39,7 +39,7 @@ export default App;
 const Layout = styled.div`
   text-align: center;
   border-radius: 0 0 7px 7px;
-  background-color: #15141c;
+  background-color: ${(props) => props.theme.background};
   min-height: 100%;
 `;
 const Wrapper = styled.div`

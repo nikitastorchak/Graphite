@@ -5,6 +5,8 @@ import {
 } from "../../types/products";
 
 const products: AppointsReducer = {
+  newProducts: [],
+  mainResources: [],
   products: [],
   categories: [],
   selectedCategory: {},
@@ -15,6 +17,12 @@ export const productsReducer = (
   action: AppointsAction
 ): AppointsReducer => {
   switch (action.type) {
+    case AppointsActionsTypes.SET_MAIN_RESOURCES:
+      return {
+        ...state,
+        newProducts: action.payload[0],
+        mainResources: action.payload[1],
+      };
     case AppointsActionsTypes.SET_CATEGORIES:
       return {
         ...state,

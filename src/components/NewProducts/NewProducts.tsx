@@ -1,6 +1,6 @@
 import Cards from "../../common/Cards/Cards";
 
-import { Title } from "../../globalStyles/GlobalStyles";
+import { Title } from "../../globalStyles/globalStyles";
 import { Product } from "../../services/ProductsHandlers";
 import { FC } from "react";
 

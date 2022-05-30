@@ -2,11 +2,16 @@ import { RootState } from "../store";
 import { ThunkAction } from "redux-thunk";
 
 export enum AppointsActionsTypes {
+  SET_MAIN_RESOURCES = "SET_MAIN_RESOURCES",
   SET_CATEGORIES = "SET_CATEGORIES",
   SET_SELECTED_CATEGORY = "SET_SELECTED_CATEGORY",
   SET_PRODUCTS = "SET_PRODUCTS",
 }
 
+interface SetMainResources {
+  type: AppointsActionsTypes.SET_MAIN_RESOURCES;
+  payload: any[];
+}
 interface SetCategoriesAction {
   type: AppointsActionsTypes.SET_CATEGORIES;
   payload: any[];
@@ -21,11 +26,14 @@ interface SetSelectedCategoryAction {
 }
 
 export interface AppointsReducer {
+  newProducts: any[];
+  mainResources: any[];
   products: any[];
   categories: any[];
   selectedCategory: Category;
 }
 export type AppointsAction =
+  | SetMainResources
   | SetCategoriesAction
   | SetSelectedCategoryAction
   | SetProductsAction;
@@ -58,3 +66,15 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   AppointsAction
 >;
+
+export interface Product {
+  categories: string[];
+  createdAt: string;
+  description: string;
+  likes: number;
+  name: string;
+  price: number;
+  priceWithDiscount: number;
+  updatedAt: string;
+  _id: string;
+}

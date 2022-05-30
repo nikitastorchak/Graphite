@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { SECOND_COLOR } from "../../constants/Colors";
-
 export const SearchWrap = styled.div`
     background-color: #f2f5f9;
     width: 100%;
