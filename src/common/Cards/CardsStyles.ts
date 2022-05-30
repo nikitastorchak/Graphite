@@ -6,14 +6,17 @@ export const Wrap = styled.div`
   overflow: scroll;
   scroll-snap-type: x mandatory;
   white-space: nowrap;
+  ::-webkit-scrollbar {
+    width: 0;
+  }
 `;
 export const Card = styled.div`
   display: flex;
   flex-shrink: 0;
   scroll-snap-align: center;
-  flex-basis: 30%;
-  margin: 7px;
-  max-width: 30%;
+  flex-basis: 46%;
+  margin: 2%;
+  max-width: 46%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -39,18 +42,27 @@ export const Preview = styled.img`
 `;
 export const PreviewWrap = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   box-shadow: 0 0px 4px 4px #121212;
-  background: linear-gradient(
-    137deg,
-    rgba(228, 231, 255, 1) 0%,
-    rgba(228, 227, 255, 1) 44%,
-    rgba(228, 240, 255, 1) 100%
-  );
+  background-color: #262434;
+  color: #fff;
+  white-space: initial;
   border-radius: 7px;
+  svg {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    top: 50;
+    left: 50;
+  }
   ::after {
     content: "";
     display: block;
+    border: none;
+    outline: none;
     padding-bottom: 100%;
   }
   img {
@@ -69,16 +81,27 @@ export const Price = styled.p`
   line-height: 26px;
 `;
 export const Button = styled.button`
-  width: fit-content;
-
-  background: transparent;
-
+  width: 50px;
+  background-color: #262434;
+  height: 50px;
+  padding: 0;
+  align-items: center;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
   border: none;
-  border-radius: 50%;
+  box-shadow: 0 0 4px 4px #00000026;
   color: #fff;
   margin-top: 10px;
-
   align-self: center;
+  transition: 0.2s;
+  :hover {
+    transition: 0.2s;
+    background-color: #3456ff;
+    svg {
+      fill: #fff;
+    }
+  }
 `;
 export const LoadingTrack = styled.div`
   width: 50px;

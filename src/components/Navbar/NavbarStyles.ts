@@ -31,6 +31,6 @@ export const NavItem = styled.p`
   text-align: center;
   font-family: "Montserrat Alternates", sans-serif;
   margin-top: 10px;
-  color: #ffffff;
+  color: #828bac;
   font-size: 10px;
 `;

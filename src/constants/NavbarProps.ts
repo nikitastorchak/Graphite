@@ -1,33 +1,33 @@
-export interface navItemsType {
+export interface NavItems {
   name: string;
   location: string;
   text: string;
 }
 
-export const navItems: navItemsType[] = [
+export const navItems: NavItems[] = [
   {
     name: "home",
-    location: "",
+    location: "/",
     text: "Главная",
   },
   {
     name: "find",
-    location: "catalog",
+    location: "/catalog",
     text: "Каталог",
   },
   {
     name: "cart",
-    location: "cart",
+    location: "/cart",
     text: "Корзина",
   },
   {
     name: "like",
-    location: "favorite",
+    location: "/favorite",
     text: "Избранное",
   },
   {
     name: "user",
-    location: "profile",
+    location: "/profile",
     text: "Мой Graphite",
   },
 ];
