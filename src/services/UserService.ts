@@ -52,7 +52,7 @@ export default class AuthService {
   };
 
   static post(url: string, body?: any) {
-    return this.makeRequest(Methods.POST, `${API_URL}/${url}`, { body });
+    return this.makeRequest(Methods.POST, `${API_URL}/${url}`, body);
   }
   static get(url: string, params?: any) {
     return this.makeRequest(Methods.GET, `${API_URL}/${url}`, {}, params);

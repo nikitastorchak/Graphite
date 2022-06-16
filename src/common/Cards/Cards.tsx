@@ -46,7 +46,7 @@ const Cards: FC<CardsProps> = ({ products }) => {
             <PreviewWrap>
               {product.preview ? (
                 <Preview
-                  src={`http://192.168.2.55:8000/media/${product.preview}`}
+                  src={`http://192.168.2.56:8000/media/${product.preview}`}
                   alt="Товар еще не имеет картинки :("
                 />
               ) : (

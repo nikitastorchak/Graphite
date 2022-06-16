@@ -1,6 +1,7 @@
 import { ChangeEvent, FC, useCallback, useEffect, useState } from "react";
 import { useDispatch } from "../../store";
 
+import Icon from "../../common/Icon/Icon";
 import SearchModal from "../Modals/SearchModal/SearchModal";
 import CatalogModal from "../Modals/CatalogModal/CatalogModal";
 import {
@@ -14,8 +15,9 @@ import { ModalExit } from "../Modals/SearchModal/SearchModalStyles";
 
 import ProductActions from "../../store/actions/productActions";
 
-import Icon from "../../common/Icon/Icon";
 import theme from "../../theme";
+
+//TODO Fix Search component logic
 
 const Search: FC = () => {
   const [isSearchActive, setIsSearchActive] = useState<boolean>(false);

@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9af143c5-2ffd-462f-9059-295779e2dd92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Buy.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/constants/FormFields.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Authorization/AutorizationStyles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Authorization/RegistrationStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Cards/CardsStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Cards/CardsStyles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Authorization/Authorization.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Authorization/Authorization.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Authorization/Registration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Authorization/Registration.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Catalog/Catalog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/NotFound/PageNotFoundStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/NotFound/PageNotFoundStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Product/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/UserService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/http/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/http/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/userActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/userActions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package.json" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -40,21 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/user/Desktop/GraphiteBack",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/home/user/Public/Graphite/graphite/node_modules/prettier",
-    "settings.editor.selected.configurable": "editing.templates",
-    "ts.external.directory.path": "/home/user/Desktop/Graphite/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/user/Desktop/GraphiteBack&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/user/Public/Graphite/graphite/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/user/Desktop/GitGraphite/Graphite/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -98,6 +109,8 @@
       <workItem from="1653546031443" duration="19021000" />
       <workItem from="1653575688571" duration="316000" />
       <workItem from="1653632544853" duration="3384000" />
+      <workItem from="1655363698147" duration="3008000" />
+      <workItem from="1655374692902" duration="4518000" />
     </task>
     <servers />
   </component>

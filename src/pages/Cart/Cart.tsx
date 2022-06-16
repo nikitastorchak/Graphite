@@ -1,16 +1,7 @@
 import { useDispatch } from "../../store";
-
 import styled from "styled-components";
 
-const Title = styled.h2`
-  font-style: bold;
-  color: #fff;
-  margin: 0;
-`;
-const ProductId = styled.p`
-  font-style: bold;
-  color: #fff;
-`;
+//TODO Fix Cart component logic
 
 const Cart = () => {
   const orders = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -32,3 +23,13 @@ const Cart = () => {
 };
 
 export default Cart;
+
+const Title = styled.h2`
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+`;
+const ProductId = styled.p`
+  font-weight: bold;
+  color: #fff;
+`;

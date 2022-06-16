@@ -4,7 +4,6 @@ import ProductActions from "../../store/actions/productActions";
 import { useEffect } from "react";
 import styled from "styled-components";
 import Button from "../../common/Button/Button";
-import Icon from "../../common/Icon/Icon";
 
 const Wrapper = styled.div`
   padding: 15px;
@@ -83,17 +82,19 @@ const Product = () => {
     getProductInfo();
   }, []);
 
+  //TODO Fix URLs to constants
+
   return (
     <Wrapper>
       <Slider>
         <SliderImage
-          img={`http://192.168.2.55:8000/media/${selectedProduct.preview}`}
+          img={`http://192.168.2.56:8000/media/${selectedProduct.preview}`}
         />
         <SliderImage
-          img={`http://192.168.2.55:8000/media/${selectedProduct.preview}`}
+          img={`http://192.168.2.56:8000/media/${selectedProduct.preview}`}
         />
         <SliderImage
-          img={`http://192.168.2.55:8000/media/${selectedProduct.preview}`}
+          img={`http://192.168.2.56:8000/media/${selectedProduct.preview}`}
         />
       </Slider>
 

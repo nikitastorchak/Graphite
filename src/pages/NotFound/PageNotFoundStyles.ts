@@ -12,8 +12,7 @@ export const Title = styled.h2`
   max-width: 80%;
   font-family: "Montserrat", sans-serif;
   text-align: center;
-
-  color: #fff;
+  color: #404040;
 `;
 export const Status = styled.h1`
   width: fit-content;
@@ -24,10 +23,10 @@ export const Status = styled.h1`
 export const BackLink = styled.a`
   padding: 15px;
   margin-top: 50px;
-  color: #fff;
+  color: #404040;
   transition: 0.2s;
   :hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.2s;
     color: #bbb2ff;
   }

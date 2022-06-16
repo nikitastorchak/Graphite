@@ -9,10 +9,6 @@ import NewProducts from "../../components/NewProducts/NewProducts";
 
 import ProductActions from "../../store/actions/productActions";
 
-const Wrapper = styled.div`
-  padding: 15px;
-`;
-
 const Main = () => {
   const dispatch = useDispatch();
   const { newProducts, mainResources } = useSelector((state) => state.products);
@@ -42,3 +38,7 @@ const Main = () => {
 };
 
 export default Main;
+
+const Wrapper = styled.div`
+  padding: 15px;
+`;

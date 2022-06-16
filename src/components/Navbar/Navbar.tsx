@@ -2,10 +2,9 @@ import { push } from "connected-react-router";
 import { useDispatch } from "../../store";
 
 import Icon from "../../common/Icon/Icon";
-
 import { Block, NavItem, NavItemWrapper, Wrapper } from "./NavbarStyles";
-import { navItems, NavItems } from "../../constants/NavbarProps";
 
+import { navItems, NavItems } from "../../constants/NavbarProps";
 import theme from "../../theme";
 
 const Navbar = () => {

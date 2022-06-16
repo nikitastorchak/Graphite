@@ -9,19 +9,12 @@ const setUser = (data: any): UserAction => ({
   payload: data,
 });
 
-interface ProductActionsProps {
-  getCategoriesAction: () => void;
-  getProductsAction: () => void;
-  getMainResources: () => void;
-  getResourcesForMainPage: () => void;
-  searchProducts: (payload: any) => () => any;
-}
 export default class ProductActions {
-  static getUserData =
+  static authorization =
     (payload: any): AppThunk =>
     async (dispatch) => {
       try {
-        const userData = await UserService.post("registration");
+        const userData = await UserService.post("authorization", payload);
         dispatch(setUser(userData?.data));
       } catch (e: any) {
         return e.message;

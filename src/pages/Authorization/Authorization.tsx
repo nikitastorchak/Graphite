@@ -1,37 +1,24 @@
 import { Field, Form } from "react-final-form";
-import styled from "styled-components";
-import Button from "../../common/Button/Button";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useDispatch } from "../../store";
 
-const Wrapper = styled.div`
-  margin-top: 50px;
-  padding: 0 15px;
-`;
+import Button from "../../common/Button/Button";
+import {
+  Block,
+  ButtonWrapper,
+  ChangeField,
+  Input,
+  Label,
+  Wrapper,
+} from "./AutorizationStyles";
 
-const ButtonWrapper = styled.div`
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-`;
-const Block = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-`;
-const Label = styled.label`
-  width: fit-content;
-  margin: 10px;
-`;
-const Input = styled.input`
-  padding: 15px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-`;
+import userActions from "../../store/actions/userActions";
+import { authFields } from "../../constants/FormFields";
 
 const Authorization = () => {
   const [variant, setVariant] = useState<"email" | "phone">("email");
+  const dispatch = useDispatch();
   const variantHandler = () => {
     variant === "email" ? setVariant("phone") : setVariant("email");
   };
@@ -60,41 +47,19 @@ const Authorization = () => {
         undefined
       );
 
-  const fields = [
-    {
-      name: "email",
-      id: "email",
-      label: "Email",
-      placeholder: "Email",
-      type: "email",
-    },
-    {
-      name: "phone",
-      id: "phone",
-      label: "Тел.",
-      placeholder: "Номер телефона",
-      type: "number",
-    },
-    {
-      name: "password",
-      id: "password",
-      label: "Пароль",
-      placeholder: "Пароль",
-      type: "password",
-    },
-  ];
-
   return (
     <Wrapper>
       <Form
-        onSubmit={(formObj) => {
-          console.log(formObj); //TODO make a request on BE
+        onSubmit={async (formObj) => {
+          formObj.type = variant;
+          await dispatch(userActions.authorization(formObj));
         }}
       >
         {({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
-            {fields.map((item, index) => {
-              return (
+            {authFields.map((item, index) =>
+              (variant === "email" && item.name === "phone") ||
+              (variant === "phone" && item.name === "email") ? undefined : (
                 <Field
                   key={index}
                   name={item.name}
@@ -113,16 +78,17 @@ const Authorization = () => {
                     </Block>
                   )}
                 </Field>
-              );
-            })}
-            <button onClick={() => variantHandler()}>
+              )
+            )}
+            <ChangeField onClick={() => variantHandler()}>
               {variant === "email"
                 ? "Использовать номер телефона для входа"
                 : "Использовать email для входа"}
-            </button>
+            </ChangeField>
             <ButtonWrapper>
               <Button type="submit">Submit</Button>
             </ButtonWrapper>
+            <Link to="/registration">Нет аккаунта? Зарегистрироваться</Link>
           </form>
         )}
       </Form>
