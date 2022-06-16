@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ChangeEvent, FC, useCallback, useEffect, useState } from "react";
 import { useDispatch } from "../../store";
 
 import SearchModal from "../Modals/SearchModal/SearchModal";
@@ -12,11 +12,12 @@ import {
 } from "./SearchStyles";
 import { ModalExit } from "../Modals/SearchModal/SearchModalStyles";
 
-import { searchProducts } from "../../store/actions/productActions";
+import ProductActions from "../../store/actions/productActions";
 
 import Icon from "../../common/Icon/Icon";
+import theme from "../../theme";
 
-const Search = () => {
+const Search: FC = () => {
   const [isSearchActive, setIsSearchActive] = useState<boolean>(false);
   const [products, setProducts] = useState<any>([]);
   const [searchValue, setSearchValue] = useState<string>("");
@@ -34,13 +35,16 @@ const Search = () => {
   const searchValueHandler = (value: string) => setSearchValue(value);
   const catalogModalHandler = (value: boolean) => setIsCatalogActive(value);
 
-  const searchHandler = async (value: any) => {
-    setSearchValue(value.target.value);
-    const searchResult = await dispatch(
-      searchProducts({ name: value.target.value })
-    );
-    setProducts(searchResult);
-  };
+  const searchHandler = useCallback(
+    async (value: ChangeEvent<HTMLInputElement>) => {
+      setSearchValue(value.target.value);
+      const searchResult = dispatch(
+        ProductActions.searchProducts({ name: value.target.value })
+      );
+      setProducts(searchResult);
+    },
+    [searchValue]
+  );
 
   return (
     <Wrapper show={isSearchActive}>
@@ -55,14 +59,14 @@ const Search = () => {
       <IconsWrap>
         {searchValue ? (
           <ModalExit onClick={() => searchValueHandler("")}>
-            <Icon name="exit" color="#fff" />
+            <Icon name="exit" color={theme.primary} />
           </ModalExit>
         ) : (
           <>
             <CatalogWrap onClick={() => catalogModalHandler(true)}>
-              <Icon name="catalog" color="#fff" />
+              <Icon name="catalog" color={theme.primary} />
             </CatalogWrap>
-            <Icon name="faq" color="#fff" />
+            <Icon name="faq" color={theme.primary} />
           </>
         )}
       </IconsWrap>

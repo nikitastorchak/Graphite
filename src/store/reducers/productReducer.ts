@@ -5,9 +5,12 @@ import {
 } from "../../types/products";
 
 const products: AppointsReducer = {
+  newProducts: [],
+  mainResources: [],
   products: [],
   categories: [],
   selectedCategory: {},
+  selectedProduct: {},
 };
 
 export const productsReducer = (
@@ -15,6 +18,12 @@ export const productsReducer = (
   action: AppointsAction
 ): AppointsReducer => {
   switch (action.type) {
+    case AppointsActionsTypes.SET_MAIN_RESOURCES:
+      return {
+        ...state,
+        newProducts: action.payload[0],
+        mainResources: action.payload[1],
+      };
     case AppointsActionsTypes.SET_CATEGORIES:
       return {
         ...state,
@@ -29,6 +38,11 @@ export const productsReducer = (
       return {
         ...state,
         products: action.payload,
+      };
+    case AppointsActionsTypes.SET_PRODUCT:
+      return {
+        ...state,
+        selectedProduct: action.payload,
       };
 
     default:

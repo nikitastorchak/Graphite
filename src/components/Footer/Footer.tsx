@@ -5,12 +5,10 @@ export const Wrapper = styled.div`
   background: transparent;
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 60px;
+  align-items: flex-start;
   width: 100%;
+  padding-top: 20px;
 `;
-const Footer = () => {
-  return <Wrapper>Graphite ©2022</Wrapper>;
-};
+const Footer = () => <Wrapper>Graphite ©2022</Wrapper>;
 
 export default Footer;

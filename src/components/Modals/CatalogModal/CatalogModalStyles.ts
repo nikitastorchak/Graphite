@@ -7,7 +7,8 @@ interface ModalWrapProps {
 
 export const ModalWrap = styled.div<ModalWrapProps>`
   position: fixed;
-  background: #fff;
+  background: #404040;
+  color: #fff;
   display: flex;
   top: 0;
   left: 0;
@@ -23,7 +24,7 @@ export const ModalWrap = styled.div<ModalWrapProps>`
   transition: 0.3s ease;
 `;
 export const ModalContent = styled.div`
-  background: #fff;
+  background: #404040;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
