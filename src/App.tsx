@@ -1,6 +1,6 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import theme from "./theme";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -16,30 +16,36 @@ import Registration from "./pages/Authorization/Registration";
 import Authorization from "./pages/Authorization/Authorization";
 
 import "./App.css";
+import userActions from "./store/actions/userActions";
+import { useDispatch } from "./store";
 
-const App: FC = () => (
-  <ThemeProvider theme={theme}>
-    <Wrapper>
-      <Navbar />
-      <Layout>
-        <Search />
-        <Switch>
-          <Route exact path="/" component={Main} />
-          <Route path="/catalog" component={Catalog} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/favorite" component={PageNotFound} />
-          <Route path="/profile" component={Profile} />
-          <Route exact path="/authorization" component={Authorization} />
-          <Route exact path="/registration" component={Registration} />
-          <Route path="/404" component={PageNotFound} />
-          <Route exact path="/product/:productId" component={Product} />
-          <Redirect to="/404" />
-        </Switch>
-      </Layout>
-      <Footer />
-    </Wrapper>
-  </ThemeProvider>
-);
+const App: FC = () => {
+  const dispatch = useDispatch();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <Navbar />
+        <Layout>
+          <Search />
+          <Switch>
+            <Route exact path="/" component={Main} />
+            <Route path="/catalog" component={Catalog} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/favorite" component={PageNotFound} />
+            <Route path="/profile" component={Profile} />
+            <Route exact path="/authorization" component={Authorization} />
+            <Route exact path="/registration" component={Registration} />
+            <Route path="/404" component={PageNotFound} />
+            <Route exact path="/product/:productId" component={Product} />
+            <Redirect to="/404" />
+          </Switch>
+        </Layout>
+        <Footer />
+      </Wrapper>
+    </ThemeProvider>
+  );
+};
 
 export default App;
 

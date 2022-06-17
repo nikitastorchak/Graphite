@@ -15,6 +15,7 @@ import {
 
 import userActions from "../../store/actions/userActions";
 import { authFields } from "../../constants/FormFields";
+import { push } from "connected-react-router";
 
 const Authorization = () => {
   const [variant, setVariant] = useState<"email" | "phone">("email");
@@ -53,6 +54,7 @@ const Authorization = () => {
         onSubmit={async (formObj) => {
           formObj.type = variant;
           await dispatch(userActions.authorization(formObj));
+          dispatch(push("/"));
         }}
       >
         {({ handleSubmit }) => (

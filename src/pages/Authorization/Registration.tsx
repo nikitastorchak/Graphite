@@ -11,10 +11,12 @@ import {
 } from "./RegistrationStyles";
 
 import { regFields } from "../../constants/FormFields";
-
-//TODO Map all fields
+import userActions from "../../store/actions/userActions";
+import { useDispatch } from "../../store";
+import { push } from "connected-react-router";
 
 const Registration = () => {
+  const dispatch = useDispatch();
   const validationHandler = (item: any) => {
     if (item.name === "password") {
       return composeValidators(required, minValue(8));
@@ -44,8 +46,9 @@ const Registration = () => {
   return (
     <Wrapper>
       <Form
-        onSubmit={(formObj) => {
-          console.log(formObj);
+        onSubmit={async (formObj) => {
+          await dispatch(userActions.registration(formObj));
+          dispatch(push("/"));
         }}
       >
         {({ handleSubmit }) => (

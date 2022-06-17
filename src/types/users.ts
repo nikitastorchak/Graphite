@@ -4,26 +4,32 @@ export enum UserActionsTypes {
 
 interface SetUserData {
   type: UserActionsTypes.SET_USER_DATA;
-  payload: any[];
+  payload: UserData;
+}
+
+interface UserData {
+  user: User;
+  tokens: Tokens;
+}
+interface Tokens {
+  accessToken: string;
+  refreshToken: string;
 }
 
 export interface UserReducer {
-  userData: any;
-  userId: string;
-  name: string;
-  secondName: string;
-  email: string;
-  phone: string;
-  address: string;
+  tokens: Tokens | {};
+  userData: User;
 }
 
 export type UserAction = SetUserData;
 
 export interface User {
-  userId: string;
+  _id: string;
   name: string;
   secondName: string;
   email: string;
   phone: string;
   address: string;
+  password: string;
+  role: string[];
 }
