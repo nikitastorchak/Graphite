@@ -8,6 +8,7 @@ import {
   Block,
   ButtonWrapper,
   ChangeField,
+  Error,
   Input,
   Label,
   Wrapper,
@@ -20,6 +21,7 @@ import { push } from "connected-react-router";
 const Authorization = () => {
   const [variant, setVariant] = useState<"email" | "phone">("email");
   const dispatch = useDispatch();
+
   const variantHandler = () => {
     variant === "email" ? setVariant("phone") : setVariant("email");
   };
@@ -33,10 +35,10 @@ const Authorization = () => {
       return composeValidators(required);
     }
   };
-  const required = (value: any) => (value ? undefined : "Обязательное поле");
-  const mustBeNumber = (value: any) =>
+  const required = (value: string) => (value ? undefined : "Обязательное поле");
+  const mustBeNumber = (value: number) =>
     isNaN(value) ? "Поле должно содержать только числа" : undefined;
-  const minValue = (min: any) => (value: any) =>
+  const minValue = (min: number) => (value: number) =>
     isNaN(value) || value >= min
       ? undefined
       : `Поле должно содержать минимум ${min} символов`;
@@ -47,16 +49,15 @@ const Authorization = () => {
         (error, validator) => error || validator(value),
         undefined
       );
+  const onSubmit = async (formObj: any) => {
+    formObj.type = variant;
+    await dispatch(userActions.authorization(formObj));
+    dispatch(push("/"));
+  };
 
   return (
     <Wrapper>
-      <Form
-        onSubmit={async (formObj) => {
-          formObj.type = variant;
-          await dispatch(userActions.authorization(formObj));
-          dispatch(push("/"));
-        }}
-      >
+      <Form onSubmit={onSubmit}>
         {({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
             {authFields.map((item, index) =>
@@ -76,7 +77,9 @@ const Authorization = () => {
                         type={item.type}
                         {...input}
                       />
-                      {meta.error && meta.touched && <span>{meta.error}</span>}
+                      {meta.error && meta.touched && (
+                        <Error>{meta.error}</Error>
+                      )}
                     </Block>
                   )}
                 </Field>

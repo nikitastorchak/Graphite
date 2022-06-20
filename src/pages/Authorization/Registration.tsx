@@ -14,6 +14,7 @@ import { regFields } from "../../constants/FormFields";
 import userActions from "../../store/actions/userActions";
 import { useDispatch } from "../../store";
 import { push } from "connected-react-router";
+import { Error } from "./AutorizationStyles";
 
 const Registration = () => {
   const dispatch = useDispatch();
@@ -28,10 +29,10 @@ const Registration = () => {
     }
   };
 
-  const required = (value: any) => (value ? undefined : "Обязательное поле");
-  const mustBeNumber = (value: any) =>
+  const required = (value: string) => (value ? undefined : "Обязательное поле");
+  const mustBeNumber = (value: number) =>
     isNaN(value) ? "Поле должно содержать только числа" : undefined;
-  const minValue = (min: any) => (value: any) =>
+  const minValue = (min: number) => (value: number) =>
     isNaN(value) || value >= min
       ? undefined
       : `Поле должно содержать минимум ${min} символов`;
@@ -42,13 +43,21 @@ const Registration = () => {
         (error, validator) => error || validator(value),
         undefined
       );
+  const onSubmit = async (formObj: any) => {
+    await dispatch(userActions.registration(formObj));
+    dispatch(push("/"));
+  };
 
   return (
     <Wrapper>
       <Form
-        onSubmit={async (formObj) => {
-          await dispatch(userActions.registration(formObj));
-          dispatch(push("/"));
+        onSubmit={onSubmit}
+        validate={(values) => {
+          const errors: any = {};
+          if (values.repeatPassword !== values.password) {
+            errors.repeatPassword = "Пароли должны совпадать";
+          }
+          return errors;
         }}
       >
         {({ handleSubmit }) => (
@@ -68,7 +77,7 @@ const Registration = () => {
                       type={item.type}
                       {...input}
                     />
-                    {meta.error && meta.touched && <span>{meta.error}</span>}
+                    {meta.error && meta.touched && <Error>{meta.error}</Error>}
                   </Block>
                 )}
               </Field>

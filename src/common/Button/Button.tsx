@@ -6,7 +6,7 @@ interface ButtonProps {
   size?: number;
   title?: string;
   color?: string;
-  onClick?: () => (behavior: any) => void;
+  onClick?: (behavior: any) => any;
   children?: React.ReactNode;
 }
 

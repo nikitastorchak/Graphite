@@ -21,15 +21,6 @@ interface CardsProps {
   products: Product[];
 }
 
-export const CardInfo = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-`;
-
 const Cards: FC<CardsProps> = ({ products }) => {
   //TODO add to cart
 
@@ -71,3 +62,12 @@ const Cards: FC<CardsProps> = ({ products }) => {
 };
 
 export default Cards;
+
+export const CardInfo = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+`;

@@ -11,7 +11,7 @@ export const authFields = [
     id: "phone",
     label: "Тел.",
     placeholder: "Номер телефона",
-    type: "number",
+    type: "text",
   },
   {
     name: "password",
@@ -49,7 +49,7 @@ export const regFields = [
     id: "phone",
     label: "Тел.",
     placeholder: "Номер телефона",
-    type: "number",
+    type: "text",
   },
   {
     name: "password",

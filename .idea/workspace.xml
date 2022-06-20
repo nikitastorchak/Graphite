@@ -3,14 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9af143c5-2ffd-462f-9059-295779e2dd92" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/FormFields.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/FormFields.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Authorization/Authorization.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Authorization/Authorization.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Authorization/AutorizationStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Authorization/AutorizationStyles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Authorization/Registration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Authorization/Registration.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/userActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/userActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/userReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/userReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/users.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +99,8 @@
       <workItem from="1653632544853" duration="3384000" />
       <workItem from="1655363698147" duration="3008000" />
       <workItem from="1655374692902" duration="5461000" />
-      <workItem from="1655453912129" duration="11568000" />
+      <workItem from="1655453912129" duration="11963000" />
+      <workItem from="1655705672189" duration="11055000" />
     </task>
     <servers />
   </component>
@@ -117,17 +117,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/common/Cards/Cards.tsx</url>
-          <line>28</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

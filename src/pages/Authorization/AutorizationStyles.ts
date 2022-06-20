@@ -32,3 +32,7 @@ export const Input = styled.input`
   border: none;
   outline: none;
 `;
+export const Error = styled.p`
+  margin: 10px 0 0 0;
+  color: #ff8282;
+`;

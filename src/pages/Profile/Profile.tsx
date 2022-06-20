@@ -1,19 +1,19 @@
 import { useDispatch, useSelector } from "../../store";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
 import styled from "styled-components";
 import userActions from "../../store/actions/userActions";
 import { push } from "connected-react-router";
+import Loading from "../../common/Loading/Loading";
 
-//TODO fix auth checker for all pages
 const Profile = () => {
   const dispatch = useDispatch();
   const { userData } = useSelector((state) => state.user);
-  const checkAuthHandler = async () => {
+  const checkAuthHandler = useCallback(async () => {
     const isToken = localStorage.getItem("accessToken");
     isToken
       ? await dispatch(userActions.getUser())
       : dispatch(push("authorization"));
-  };
+  }, []);
   useEffect(() => {
     checkAuthHandler();
   }, []);
@@ -26,7 +26,7 @@ const Profile = () => {
           </Title>
         </>
       ) : (
-        <p>Авторизируйтесь</p>
+        <Loading />
       )}
     </>
   );
