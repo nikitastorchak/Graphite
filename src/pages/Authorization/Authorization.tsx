@@ -1,10 +1,8 @@
+import { FC, useCallback, useState } from "react";
 import { Field, Form } from "react-final-form";
-import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "../../store";
 import { push } from "connected-react-router";
-import { AuthFields } from "../../constants/FormFields";
-import Utils from "../../services/FormUtils/Utils";
 
 import Button from "../../common/Button/Button";
 import {
@@ -18,47 +16,51 @@ import {
   Wrapper,
 } from "./AutorizationStyles";
 
+import { AuthFields } from "../../constants/FormFields";
 import userActions from "../../store/actions/userActions";
 
-const Authorization = () => {
-  const [variant, setVariant] = useState<"email" | "phone">("email");
+const Authorization: FC = () => {
   const dispatch = useDispatch();
+  const [variant, setVariant] = useState<"email" | "phone">("email");
 
-  const variantHandler = useCallback((): void => {
-    variant === "email" ? setVariant("phone") : setVariant("email");
+  const handleVariantChanger = useCallback((): void => {
+    setVariant(variant === "email" ? "phone" : "email");
   }, [variant]);
 
-  const onSubmit = useCallback(
-    async (formObj: FormProps) => {
-      formObj.type = variant;
-      await dispatch(userActions.authorization(formObj));
-      dispatch(push("/"));
-    },
+  const handleSubmit = useCallback(async (formObj: FormProps) => {
+    formObj.type = variant;
+    await dispatch(userActions.authorization(formObj));
+    dispatch(push("/"));
+  }, []);
+
+  const handleFilterFields = useCallback(
+    () =>
+      AuthFields.filter(
+        (field) => field.name !== (variant === "email" ? "phone" : "email")
+      ),
     [variant]
   );
 
   return (
     <Wrapper>
-      <Form onSubmit={onSubmit}>
+      <Form onSubmit={handleSubmit}>
         {({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
-            {AuthFields.map((item, index) =>
-              (variant === "email" && item.name === "phone") ||
-              (variant === "phone" && item.name === "email") ? (
-                false
-              ) : (
+            {handleFilterFields().map((item, index) => {
+              const { id, name, label, placeholder, type } = item;
+              return (
                 <Field
                   key={index}
-                  name={item.name}
-                  validate={Utils.validationHandler(item)}
+                  name={name}
+                  // TODO validate={Utils.handleValidateFields(item)}
                 >
                   {({ input, meta }) => (
                     <Block>
-                      <Label htmlFor={item.id}>{item.label}</Label>
+                      <Label htmlFor={id}>{label}</Label>
                       <Input
-                        id={item.name}
-                        placeholder={item.placeholder}
-                        type={item.type}
+                        id={name}
+                        placeholder={placeholder}
+                        type={type}
                         {...input}
                       />
                       {meta.error && meta.touched && (
@@ -67,15 +69,15 @@ const Authorization = () => {
                     </Block>
                   )}
                 </Field>
-              )
-            )}
-            <ChangeField onClick={variantHandler}>
+              );
+            })}
+            <ChangeField onClick={handleVariantChanger}>
               {variant === "email"
                 ? "Использовать номер телефона для входа"
                 : "Использовать email для входа"}
             </ChangeField>
             <ButtonWrapper>
-              <Button type="submit">Submit</Button>
+              <Button type="submit">Войти</Button>
             </ButtonWrapper>
             <Link to="/registration">Нет аккаунта? Зарегистрироваться</Link>
           </form>
