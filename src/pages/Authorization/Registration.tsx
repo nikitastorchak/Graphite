@@ -10,7 +10,7 @@ import {
   Wrapper,
 } from "./RegistrationStyles";
 
-import { regFields } from "../../constants/FormFields";
+import { RegFields } from "../../constants/FormFields";
 import userActions from "../../store/actions/userActions";
 import { useDispatch } from "../../store";
 import { push } from "connected-react-router";
@@ -62,7 +62,7 @@ const Registration = () => {
       >
         {({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
-            {regFields.map((item, index) => (
+            {RegFields.map((item, index) => (
               <Field
                 key={index}
                 name={item.name}

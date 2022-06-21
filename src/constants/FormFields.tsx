@@ -1,4 +1,4 @@
-export const authFields = [
+export const AuthFields = [
   {
     name: "email",
     id: "email",
@@ -22,7 +22,7 @@ export const authFields = [
   },
 ];
 
-export const regFields = [
+export const RegFields = [
   {
     name: "name",
     id: "name",

@@ -36,3 +36,10 @@ export const Error = styled.p`
   margin: 10px 0 0 0;
   color: #ff8282;
 `;
+
+export interface FormProps {
+  name: string;
+  password: string;
+  email: string;
+  type: string;
+}
