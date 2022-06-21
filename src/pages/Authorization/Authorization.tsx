@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from "react";
+import { FC, useState } from "react";
 import { Field, Form } from "react-final-form";
 import { Link } from "react-router-dom";
 import { useDispatch } from "../../store";
@@ -16,52 +16,51 @@ import {
   Wrapper,
 } from "./AutorizationStyles";
 
-import { AuthFields } from "../../constants/FormFields";
+import {
+  handleFilterFields,
+  handleValidateFields,
+} from "../../services/FormUtils/Utils";
 import userActions from "../../store/actions/userActions";
+
+import { AuthFields } from "../../constants/FormFields";
 
 const Authorization: FC = () => {
   const dispatch = useDispatch();
   const [variant, setVariant] = useState<"email" | "phone">("email");
 
-  const handleVariantChanger = useCallback((): void => {
-    setVariant(variant === "email" ? "phone" : "email");
-  }, [variant]);
+  const handleVariantChanger = () => {
+    const value = variant === "email" ? "phone" : "email";
+    setVariant(value);
+  };
 
-  const handleSubmit = useCallback(async (formObj: FormProps) => {
-    formObj.type = variant;
-    await dispatch(userActions.authorization(formObj));
-    dispatch(push("/"));
-  }, []);
-
-  const handleFilterFields = useCallback(
-    () =>
-      AuthFields.filter(
-        (field) => field.name !== (variant === "email" ? "phone" : "email")
-      ),
-    [variant]
-  );
+  const handleOnSubmit = async (formObj: FormProps) => {
+    if (formObj.phone && formObj.email && formObj.password) {
+      formObj.type = variant;
+      await dispatch(userActions.authorization(formObj));
+      dispatch(push("/"));
+    } else {
+      alert("Заполните все поля");
+    }
+  };
 
   return (
     <Wrapper>
-      <Form onSubmit={handleSubmit}>
-        {({ handleSubmit }) => (
+      <Form
+        onSubmit={handleOnSubmit}
+        render={({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
-            {handleFilterFields().map((item, index) => {
+            {handleFilterFields(AuthFields, variant).map((item, index) => {
               const { id, name, label, placeholder, type } = item;
               return (
-                <Field
-                  key={index}
-                  name={name}
-                  // TODO validate={Utils.handleValidateFields(item)}
-                >
+                <Field name={name} validate={handleValidateFields}>
                   {({ input, meta }) => (
                     <Block>
                       <Label htmlFor={id}>{label}</Label>
                       <Input
-                        id={name}
-                        placeholder={placeholder}
-                        type={type}
                         {...input}
+                        id={id}
+                        type={type}
+                        placeholder={placeholder}
                       />
                       {meta.error && meta.touched && (
                         <Error>{meta.error}</Error>
@@ -71,18 +70,18 @@ const Authorization: FC = () => {
                 </Field>
               );
             })}
-            <ChangeField onClick={handleVariantChanger}>
-              {variant === "email"
-                ? "Использовать номер телефона для входа"
-                : "Использовать email для входа"}
-            </ChangeField>
             <ButtonWrapper>
               <Button type="submit">Войти</Button>
             </ButtonWrapper>
-            <Link to="/registration">Нет аккаунта? Зарегистрироваться</Link>
           </form>
         )}
-      </Form>
+      />
+      <ChangeField onClick={handleVariantChanger}>
+        {variant === "email"
+          ? "Использовать номер телефона для входа"
+          : "Использовать email для входа"}
+      </ChangeField>
+      <Link to="/registration">Нет аккаунта? Зарегистрироваться</Link>
     </Wrapper>
   );
 };

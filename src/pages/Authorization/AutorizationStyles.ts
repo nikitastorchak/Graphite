@@ -38,7 +38,7 @@ export const Error = styled.p`
 `;
 
 export interface FormProps {
-  name: string;
+  phone: string;
   password: string;
   email: string;
   type: string;

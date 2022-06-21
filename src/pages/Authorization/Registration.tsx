@@ -1,5 +1,8 @@
+import { FC } from "react";
 import { Field, Form } from "react-final-form";
 import { Link } from "react-router-dom";
+import { useDispatch } from "../../store";
+import { push } from "connected-react-router";
 
 import Button from "../../common/Button/Button";
 import {
@@ -10,85 +13,59 @@ import {
   Wrapper,
 } from "./RegistrationStyles";
 
-import { RegFields } from "../../constants/FormFields";
 import userActions from "../../store/actions/userActions";
-import { useDispatch } from "../../store";
-import { push } from "connected-react-router";
-import { Error } from "./AutorizationStyles";
+import { handleValidateFields } from "../../services/FormUtils/Utils";
 
-const Registration = () => {
+import { RegFields } from "../../constants/FormFields";
+
+import { Error, FormProps } from "./AutorizationStyles";
+
+const Registration: FC = () => {
   const dispatch = useDispatch();
-  const validationHandler = (item: any) => {
-    if (item.name === "password") {
-      return composeValidators(required, minValue(8));
-    }
-    if (item.name === "phone") {
-      return composeValidators(required, mustBeNumber, minValue(11));
-    } else {
-      return composeValidators(required);
-    }
-  };
 
-  const required = (value: string) => (value ? undefined : "Обязательное поле");
-  const mustBeNumber = (value: number) =>
-    isNaN(value) ? "Поле должно содержать только числа" : undefined;
-  const minValue = (min: number) => (value: number) =>
-    isNaN(value) || value >= min
-      ? undefined
-      : `Поле должно содержать минимум ${min} символов`;
-  const composeValidators =
-    (...validators: any[]) =>
-    (value: any) =>
-      validators.reduce(
-        (error, validator) => error || validator(value),
-        undefined
-      );
-  const onSubmit = async (formObj: any) => {
-    await dispatch(userActions.registration(formObj));
-    dispatch(push("/"));
+  const handleOnSubmit = async (formObj: FormProps) => {
+    if (formObj.phone && formObj.email && formObj.password) {
+      await dispatch(userActions.registration(formObj));
+      dispatch(push("/"));
+    } else {
+      alert("Заполните все необходимые поля");
+    }
   };
 
   return (
     <Wrapper>
       <Form
-        onSubmit={onSubmit}
-        validate={(values) => {
-          const errors: any = {};
-          if (values.repeatPassword !== values.password) {
-            errors.repeatPassword = "Пароли должны совпадать";
-          }
-          return errors;
-        }}
-      >
-        {({ handleSubmit }) => (
+        onSubmit={handleOnSubmit}
+        render={({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
-            {RegFields.map((item, index) => (
-              <Field
-                key={index}
-                name={item.name}
-                validate={validationHandler(item)}
-              >
-                {({ input, meta }) => (
-                  <Block>
-                    <Label htmlFor={item.id}>{item.label}</Label>
-                    <Input
-                      id={item.name}
-                      placeholder={item.placeholder}
-                      type={item.type}
-                      {...input}
-                    />
-                    {meta.error && meta.touched && <Error>{meta.error}</Error>}
-                  </Block>
-                )}
-              </Field>
-            ))}
+            {RegFields.map((item, index) => {
+              const { id, name, label, placeholder, type } = item;
+              return (
+                <Field name={name} validate={handleValidateFields}>
+                  {({ input, meta }) => (
+                    <Block>
+                      <Label htmlFor={id}>{label}</Label>
+                      <Input
+                        {...input}
+                        id={id}
+                        type={type}
+                        placeholder={placeholder}
+                      />
+                      {meta.error && meta.touched && (
+                        <Error>{meta.error}</Error>
+                      )}
+                    </Block>
+                  )}
+                </Field>
+              );
+            })}
             <ButtonWrapper>
-              <Button type="submit">Submit</Button>
+              <Button type="submit">Зарегистрироваться</Button>
             </ButtonWrapper>
-            <Link to="/authorization">Уже есть аккаунт? Войти</Link>
           </form>
         )}
-      </Form>
+      />
+      <Link to="/authorization">Уже есть аккаунт? Войти</Link>
     </Wrapper>
   );
 };

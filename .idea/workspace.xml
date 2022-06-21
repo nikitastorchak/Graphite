@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9af143c5-2ffd-462f-9059-295779e2dd92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/services/FormUtils/Utils.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Authorization/Authorization.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Authorization/Authorization.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/FormUtils/Utils.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Authorization/AutorizationStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Authorization/AutorizationStyles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Authorization/Registration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Authorization/Registration.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/FormUtils/Utils.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/FormUtils/Utils.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +99,9 @@
       <workItem from="1655374692902" duration="5461000" />
       <workItem from="1655453912129" duration="11963000" />
       <workItem from="1655705672189" duration="16240000" />
-      <workItem from="1655799076512" duration="5437000" />
+      <workItem from="1655799076512" duration="9284000" />
+      <workItem from="1655813920001" duration="263000" />
+      <workItem from="1655814527985" duration="3474000" />
     </task>
     <servers />
   </component>
