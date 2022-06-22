@@ -1,17 +1,36 @@
-import { useDispatch } from "../../store";
+import { FC, useEffect } from "react";
+import { useDispatch, useSelector } from "../../store";
 import styled from "styled-components";
+import Cookies from "js-cookie";
 
-//TODO Fix Cart component logic
+import ProductActions from "../../store/actions/productActions";
 
-const Cart = () => {
-  const orders = JSON.parse(localStorage.getItem("cart") || "[]");
+const Cart: FC = () => {
+  const { cart } = useSelector((state) => state.products);
+  const { userData } = useSelector((state) => state.user);
+
+  useEffect(() => {
+    getCart();
+  }, []);
+
+  const getCart = async () => {
+    if (userData._id) {
+      const localCart = JSON.parse(Cookies.get("cart") || "[]");
+      await dispatch(
+        ProductActions.getCart({ userId: userData._id, localCart })
+      );
+    } else {
+      const userCart = JSON.parse(Cookies.get("cart") || "[]");
+      await dispatch(ProductActions.getLocalCart(userCart));
+    }
+  };
   const dispatch = useDispatch();
   return (
     <>
-      {orders.length > 0 ? (
+      {cart.length > 0 ? (
         <>
           <Title>Корзина</Title>
-          {orders.map((id: string) => (
+          {cart.map((id: string) => (
             <ProductId>{id}</ProductId>
           ))}
         </>

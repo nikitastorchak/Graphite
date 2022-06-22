@@ -81,7 +81,7 @@ export const PriceWithDiscount = styled.p`
 `;
 
 interface PriceProps {
-  sale: boolean;
+  sale: number;
 }
 
 export const Price = styled.p<PriceProps>`

@@ -41,8 +41,10 @@ const Registration: FC = () => {
             {RegFields.map((item, index) => {
               const { id, name, label, placeholder, type } = item;
               return (
-                <Field name={name} validate={handleValidateFields}>
-                  {({ input, meta }) => (
+                <Field
+                  name={name}
+                  validate={handleValidateFields}
+                  render={({ input, meta }) => (
                     <Block>
                       <Label htmlFor={id}>{label}</Label>
                       <Input
@@ -56,7 +58,7 @@ const Registration: FC = () => {
                       )}
                     </Block>
                   )}
-                </Field>
+                />
               );
             })}
             <ButtonWrapper>

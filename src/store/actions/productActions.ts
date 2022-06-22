@@ -3,6 +3,7 @@ import {
   List,
   AppThunk,
   AppointsAction,
+  GetCartProps,
 } from "../../types/products";
 
 import UserService from "../../services/UserService";
@@ -11,6 +12,7 @@ import {
   NewProducts,
   ProductsByCategories,
 } from "../../services/ProductsHandlers";
+import { uniq } from "lodash";
 
 const setCategories = (data: List[]): AppointsAction => ({
   type: AppointsActionsTypes.SET_CATEGORIES,
@@ -26,6 +28,10 @@ const setProduct = (data: any): AppointsAction => ({
 });
 const setMainResources = (data: any): AppointsAction => ({
   type: AppointsActionsTypes.SET_MAIN_RESOURCES,
+  payload: data,
+});
+const setCart = (data: string[]): AppointsAction => ({
+  type: AppointsActionsTypes.SET_CART,
   payload: data,
 });
 const setSelectedCategory = (data: any): AppointsAction => ({
@@ -57,6 +63,35 @@ export default class ProductActions {
       return e.message;
     }
   };
+
+  static getCart =
+    (payload: GetCartProps): AppThunk =>
+    async (dispatch) => {
+      const { userId, localCart } = payload;
+      try {
+        const response = await UserService.get("showUserCart", { userId });
+        const userCart = response.data.length > 0 ? response.data[0].cart : [];
+        const allCarts: string[] = uniq([...localCart, ...userCart]);
+        await UserService.patch("updateCart", {
+          userId: payload.userId,
+          products: allCarts,
+        });
+
+        dispatch(setCart(allCarts));
+      } catch (e: any) {
+        return e.message;
+      }
+    };
+
+  static getLocalCart =
+    (payload: string[]): AppThunk =>
+    async (dispatch) => {
+      try {
+        dispatch(setCart(payload));
+      } catch (e: any) {
+        return e.message;
+      }
+    };
 
   static getProduct =
     (payload: any): AppThunk =>

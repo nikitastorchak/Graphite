@@ -5,6 +5,7 @@ import { UserAction } from "./users";
 export enum AppointsActionsTypes {
   SET_MAIN_RESOURCES = "SET_MAIN_RESOURCES",
   SET_CATEGORIES = "SET_CATEGORIES",
+  SET_CART = "SET_CART",
   SET_SELECTED_CATEGORY = "SET_SELECTED_CATEGORY",
   SET_PRODUCTS = "SET_PRODUCTS",
   SET_PRODUCT = "SET_PRODUCT",
@@ -26,14 +27,19 @@ interface SetProductAction {
   type: AppointsActionsTypes.SET_PRODUCT;
   payload: any[];
 }
+interface SetCartAction {
+  type: AppointsActionsTypes.SET_CART;
+  payload: string[];
+}
 interface SetSelectedCategoryAction {
   type: AppointsActionsTypes.SET_SELECTED_CATEGORY;
   payload: Category;
 }
 
-export interface AppointsReducer {
+export interface ProductsReducer {
   newProducts: any[];
   mainResources: any[];
+  cart: any[];
   products: any[];
   categories: any[];
   selectedCategory: Category;
@@ -44,6 +50,7 @@ export type AppointsAction =
   | SetMainResources
   | SetCategoriesAction
   | SetSelectedCategoryAction
+  | SetCartAction
   | SetProductAction
   | SetProductsAction;
 
@@ -64,9 +71,14 @@ export interface Response {
   data: Data;
 }
 export interface Category {
-  _id?: String;
-  name?: String;
+  _id?: string;
+  name?: string;
   createdAt?: Date | null;
+}
+
+export interface GetCartProps {
+  userId?: string;
+  localCart: string[];
 }
 
 export type AppThunk<ReturnType = void> = ThunkAction<

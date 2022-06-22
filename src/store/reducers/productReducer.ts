@@ -1,11 +1,12 @@
 import {
   AppointsAction,
   AppointsActionsTypes,
-  AppointsReducer,
+  ProductsReducer,
 } from "../../types/products";
 
-const products: AppointsReducer = {
+const products: ProductsReducer = {
   newProducts: [],
+  cart: [],
   mainResources: [],
   products: [],
   categories: [],
@@ -16,7 +17,7 @@ const products: AppointsReducer = {
 export const productsReducer = (
   state = products,
   action: AppointsAction
-): AppointsReducer => {
+): ProductsReducer => {
   switch (action.type) {
     case AppointsActionsTypes.SET_MAIN_RESOURCES:
       return {
@@ -38,6 +39,11 @@ export const productsReducer = (
       return {
         ...state,
         products: action.payload,
+      };
+    case AppointsActionsTypes.SET_CART:
+      return {
+        ...state,
+        cart: action.payload,
       };
     case AppointsActionsTypes.SET_PRODUCT:
       return {

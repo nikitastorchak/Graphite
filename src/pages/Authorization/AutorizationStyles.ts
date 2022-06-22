@@ -23,6 +23,7 @@ export const Label = styled.label`
 `;
 export const ChangeField = styled.button`
   margin: 20px;
+  width: 100%;
   border: none;
   background-color: transparent;
 `;

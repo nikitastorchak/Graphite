@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useCallback, useMemo, useState } from "react";
 import { Field, Form } from "react-final-form";
 import { Link } from "react-router-dom";
 import { useDispatch } from "../../store";
@@ -28,13 +28,12 @@ const Authorization: FC = () => {
   const dispatch = useDispatch();
   const [variant, setVariant] = useState<"email" | "phone">("email");
 
-  const handleVariantChanger = () => {
-    const value = variant === "email" ? "phone" : "email";
-    setVariant(value);
-  };
+  const handleVariantChanger = useCallback(() => {
+    setVariant(variant === "email" ? "phone" : "email");
+  }, [variant]);
 
   const handleOnSubmit = async (formObj: FormProps) => {
-    if (formObj.phone && formObj.email && formObj.password) {
+    if ((formObj.phone || formObj.email) && formObj.password) {
       formObj.type = variant;
       await dispatch(userActions.authorization(formObj));
       dispatch(push("/"));
@@ -43,17 +42,24 @@ const Authorization: FC = () => {
     }
   };
 
+  const handleFields = useMemo(
+    () => handleFilterFields(AuthFields, variant),
+    [variant]
+  );
+
   return (
     <Wrapper>
       <Form
         onSubmit={handleOnSubmit}
         render={({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
-            {handleFilterFields(AuthFields, variant).map((item, index) => {
+            {handleFields.map((item, index) => {
               const { id, name, label, placeholder, type } = item;
               return (
-                <Field name={name} validate={handleValidateFields}>
-                  {({ input, meta }) => (
+                <Field
+                  name={name}
+                  validate={handleValidateFields(name)}
+                  render={({ input, meta }) => (
                     <Block>
                       <Label htmlFor={id}>{label}</Label>
                       <Input
@@ -67,7 +73,7 @@ const Authorization: FC = () => {
                       )}
                     </Block>
                   )}
-                </Field>
+                />
               );
             })}
             <ButtonWrapper>

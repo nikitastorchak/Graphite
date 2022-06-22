@@ -2,7 +2,7 @@ import { AuthFields } from "../../constants/FormFields";
 
 export const handleValidateFields = (fieldName: any) => {
   if (fieldName === "password") {
-    return composeValidators(validateFieldRequired, validateMinValue(8));
+    return composeValidators(validateFieldRequired, validateMinValue(6));
   }
   if (fieldName === "phone") {
     return composeValidators(
@@ -26,7 +26,7 @@ export const validateMustBeNumber = (value: number) =>
   isNaN(value) && "Поле должно содержать только числа";
 
 export const validateMinValue = (min: number) => (value: string) =>
-  value.length <= min && `Поле должно содержать минимум ${min} символов`;
+  value.length < min && `Поле должно содержать минимум ${min} символов`;
 
 export const composeValidators =
   (...validators: any[]) =>

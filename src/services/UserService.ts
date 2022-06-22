@@ -58,7 +58,7 @@ export default class AuthService {
     return this.makeRequest(Methods.GET, `${API_URL}/${url}`, {}, params);
   }
 
-  static patch(url: string, body: List) {
+  static patch(url: string, body: any) {
     return this.makeRequest(Methods.PATCH, `${API_URL}/${url}`, body);
   }
 
