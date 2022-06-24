@@ -9,6 +9,7 @@ export enum AppointsActionsTypes {
   SET_SELECTED_CATEGORY = "SET_SELECTED_CATEGORY",
   SET_PRODUCTS = "SET_PRODUCTS",
   SET_PRODUCT = "SET_PRODUCT",
+  TOGGLE_LOADER = "TOGGLE_LOADER",
 }
 
 interface SetMainResources {
@@ -35,11 +36,16 @@ interface SetSelectedCategoryAction {
   type: AppointsActionsTypes.SET_SELECTED_CATEGORY;
   payload: Category;
 }
+interface ToggleLoader {
+  type: AppointsActionsTypes.TOGGLE_LOADER;
+  payload: boolean;
+}
 
 export interface ProductsReducer {
+  isLoading: boolean;
   newProducts: any[];
   mainResources: any[];
-  cart: any[];
+  cart: string[];
   products: any[];
   categories: any[];
   selectedCategory: Category;
@@ -52,7 +58,8 @@ export type AppointsAction =
   | SetSelectedCategoryAction
   | SetCartAction
   | SetProductAction
-  | SetProductsAction;
+  | SetProductsAction
+  | ToggleLoader;
 
 export interface List {
   _id?: string;
@@ -78,7 +85,6 @@ export interface Category {
 
 export interface GetCartProps {
   userId?: string;
-  localCart: string[];
 }
 
 export type AppThunk<ReturnType = void> = ThunkAction<

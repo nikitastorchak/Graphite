@@ -1,4 +1,8 @@
-import { AppThunk } from "../../types/products";
+import {
+  AppointsAction,
+  AppointsActionsTypes,
+  AppThunk,
+} from "../../types/products";
 
 import UserService from "../../services/UserService";
 
@@ -6,6 +10,11 @@ import { UserAction, UserActionsTypes } from "../../types/users";
 
 const setUser = (data: any): UserAction => ({
   type: UserActionsTypes.SET_USER_DATA,
+  payload: data,
+});
+
+const toggleLoader = (data: boolean): AppointsAction => ({
+  type: AppointsActionsTypes.TOGGLE_LOADER,
   payload: data,
 });
 
@@ -40,6 +49,7 @@ export default class ProductActions {
     try {
       console.log("fdfd");
       const userData = await UserService.post("getUser");
+      dispatch(toggleLoader(false));
       dispatch(setUser(userData?.data));
     } catch (e: any) {
       return e.message;

@@ -42,7 +42,7 @@ const Authorization: FC = () => {
     }
   };
 
-  const handleFields = useMemo(
+  const fields = useMemo(
     () => handleFilterFields(AuthFields, variant),
     [variant]
   );
@@ -53,7 +53,7 @@ const Authorization: FC = () => {
         onSubmit={handleOnSubmit}
         render={({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
-            {handleFields.map((item, index) => {
+            {fields.map((item, index) => {
               const { id, name, label, placeholder, type } = item;
               return (
                 <Field

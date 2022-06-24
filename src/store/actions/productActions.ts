@@ -34,6 +34,10 @@ const setCart = (data: string[]): AppointsAction => ({
   type: AppointsActionsTypes.SET_CART,
   payload: data,
 });
+const toggleLoader = (data: boolean): AppointsAction => ({
+  type: AppointsActionsTypes.TOGGLE_LOADER,
+  payload: data,
+});
 const setSelectedCategory = (data: any): AppointsAction => ({
   type: AppointsActionsTypes.SET_SELECTED_CATEGORY,
   payload: data,
@@ -64,24 +68,47 @@ export default class ProductActions {
     }
   };
 
-  static getCart =
-    (payload: GetCartProps): AppThunk =>
+  static addProductToCart =
+    (payload: any): AppThunk =>
     async (dispatch) => {
-      const { userId, localCart } = payload;
       try {
-        const response = await UserService.get("showUserCart", { userId });
-        const userCart = response.data.length > 0 ? response.data[0].cart : [];
-        const allCarts: string[] = uniq([...localCart, ...userCart]);
-        await UserService.patch("updateCart", {
-          userId: payload.userId,
-          products: allCarts,
-        });
-
-        dispatch(setCart(allCarts));
+        await UserService.patch("addProductsToCart", payload);
       } catch (e: any) {
         return e.message;
       }
     };
+
+  static getCart =
+    (payload: GetCartProps): AppThunk =>
+    async (dispatch) => {
+      const { userId } = payload;
+      try {
+        await UserService.get("showUserCart", {
+          userId,
+        });
+      } catch (e: any) {
+        return e.message;
+      }
+    };
+
+  // static updateCart =
+  //   (payload: GetCartProps): AppThunk =>
+  //   async (dispatch) => {
+  //     const { userId, localCart } = payload;
+  //     try {
+  //       // const response = await UserService.get("showUserCart", { userId });
+  //       // const userCart = response.data.length > 0 ? response.data[0].cart : [];
+  //       // const allCarts: string[] = uniq([...localCart, ...userCart]);
+  //       await UserService.patch("updateCart", {
+  //         userId: payload.userId,
+  //         products: localCart,
+  //       });
+  //
+  //       // dispatch(setCart(allCarts));
+  //     } catch (e: any) {
+  //       return e.message;
+  //     }
+  //   };
 
   static getLocalCart =
     (payload: string[]): AppThunk =>
@@ -99,6 +126,15 @@ export default class ProductActions {
       try {
         const response = await UserService.get("showProductById", payload);
         dispatch(setProduct(response?.data));
+      } catch (e: any) {
+        return e.message;
+      }
+    };
+  static toggleLoader =
+    (payload: boolean): AppThunk =>
+    async (dispatch) => {
+      try {
+        dispatch(toggleLoader(payload));
       } catch (e: any) {
         return e.message;
       }

@@ -5,6 +5,7 @@ import {
 } from "../../types/products";
 
 const products: ProductsReducer = {
+  isLoading: false,
   newProducts: [],
   cart: [],
   mainResources: [],
@@ -49,6 +50,11 @@ export const productsReducer = (
       return {
         ...state,
         selectedProduct: action.payload,
+      };
+    case AppointsActionsTypes.TOGGLE_LOADER:
+      return {
+        ...state,
+        isLoading: action.payload,
       };
 
     default:

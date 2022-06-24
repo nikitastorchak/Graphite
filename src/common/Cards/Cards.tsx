@@ -1,6 +1,6 @@
-import { FC } from "react";
+import { FC, useCallback, useState } from "react";
 import styled from "styled-components";
-import { useDispatch } from "../../store";
+import { useDispatch, useSelector } from "../../store";
 import { push } from "connected-react-router";
 import { uniq } from "lodash";
 import { Product } from "../../services/ProductsHandlers";
@@ -18,6 +18,8 @@ import {
   PriceWithDiscount,
   Wrapper,
 } from "./CardsStyles";
+import userActions from "../../store/actions/userActions";
+import ProductActions from "../../store/actions/productActions";
 
 interface CardsProps {
   products: Product[];
@@ -25,16 +27,43 @@ interface CardsProps {
 
 const Cards: FC<CardsProps> = ({ products }) => {
   const dispatch = useDispatch();
+
+  const { userData } = useSelector((state) => state.user);
+
   const changeLocation = (url: string) => {
     dispatch(push(url));
   };
 
-  const handleAddToCart = (id: string) => {
-    const cart = JSON.parse(Cookies.get("cart") || "[]");
-    cart.push(id);
-    const uniqCart = uniq(cart);
-    Cookies.set("cart", JSON.stringify(uniqCart), { expires: 14 });
-    console.log(Cookies.get("cart"));
+  const handleAddToCart = async (id: string) => {
+    if (userData._id) {
+      const cart = JSON.parse(Cookies.get("cart") || "[]");
+      cart === [] && cart.push({ productId: id, count: 1 });
+      cart.map((item: any) => {
+        if (item.productId === id) {
+          item.count++;
+        } else {
+          cart.push({ productId: id, count: 1 });
+        }
+      });
+      Cookies.set("cart", JSON.stringify(cart), { expires: 14 });
+      await dispatch(
+        ProductActions.addProductToCart({
+          userId: userData._id,
+          products: [{ productId: id, count: 1 }],
+        })
+      );
+    } else {
+      const cart = JSON.parse(Cookies.get("cart") || "[]");
+      cart === [] && cart.push({ productId: id, count: 1 });
+      cart.map((item: any) => {
+        if (item.productId === id) {
+          item.count++;
+        } else {
+          cart.push({ productId: id, count: 1 });
+        }
+      });
+      Cookies.set("cart", JSON.stringify(cart), { expires: 14 });
+    }
   };
 
   return (
