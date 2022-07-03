@@ -11,8 +11,9 @@ import {
 } from "react-redux";
 import thunk, { ThunkDispatch } from "redux-thunk";
 import { createBrowserHistory } from "history";
-import { connectRouter, push, routerMiddleware } from "connected-react-router";
+import { connectRouter, routerMiddleware } from "connected-react-router";
 import { productsReducer } from "./reducers/productReducer";
+import { userReducer } from "./reducers/userReducer";
 
 type AppAction = ReturnType<typeof store.dispatch>;
 
@@ -23,6 +24,7 @@ export const history = createBrowserHistory();
 
 const rootReducer = combineReducers({
   products: productsReducer,
+  user: userReducer,
   router: connectRouter(history),
 });
 

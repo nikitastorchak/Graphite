@@ -1,14 +1,61 @@
-import {ReactNode} from 'react'
-import './Main.scss'
 import styled from "styled-components";
+import React from "react";
 
-const StyledButton = styled.button`
-
-`
 interface ButtonProps {
-  children: ReactNode
+  type?: "submit" | "reset" | "button" | undefined;
+  size?: number;
+  title?: string;
+  color?: string;
+  onClick?: (behavior: any) => any;
+  children?: React.ReactNode;
 }
-const Button = ({children}:ButtonProps) => <StyledButton>{children}</StyledButton>
 
+const Wrapper = styled.button`
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  overflow: hidden;
+  width: 100px;
+  height: 50px;
+  background-color: ${(props) => props.theme.primaryLightButton};
+  padding: 0;
+  align-items: center;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  align-self: center;
+  transition: 0.2s;
+  :hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+    background-color: ${(props) => props.theme.primaryLightButtonHover};
+  }
+  :active {
+    transform: scale(1.05);
+    transition: 0.2s;
+    background-color: ${(props) => props.theme.primaryLightButtonHover};
+  }
+`;
 
-export default Button
+const Text = styled.p`
+  margin: 0px;
+  font-size: 16px;
+  color: ${(props) => props.theme.primaryButtonText};
+`;
+
+const Button = ({
+  type,
+  size,
+  title,
+  color,
+  onClick,
+  children,
+}: ButtonProps) => (
+  <Wrapper type={type} onClick={onClick}>
+    {title && <Text>{title}</Text>}
+    {children}
+  </Wrapper>
+);
+
+export default Button;

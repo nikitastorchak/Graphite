@@ -1,23 +1,20 @@
 import styled from "styled-components";
 
-import { SECOND_COLOR } from "../../constants/Colors";
-
 export const SearchWrap = styled.div`
-    background-color: #f2f5f9;
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: center;
-   border-radius: 4px;
-    svg {
+  background-color: #fff;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  border-radius: 4px;
+  svg {
     width: 20px;
     height: 20px;
     align-self: center;
     margin: 0 10px;
     color: #81a7ffbf;
-  }
   }
 `;
 export const Wrapper = styled.div<any>`
@@ -39,7 +36,7 @@ export const Wrapper = styled.div<any>`
   }
 `;
 export const SearchField = styled.input`
-  background-color: #f2f5f9;
+  background-color: #fff;
   border: none;
   font-weight: 600;
   width: 100%;

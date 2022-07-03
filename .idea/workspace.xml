@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9af143c5-2ffd-462f-9059-295779e2dd92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/Buy.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Cards/Cards.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Cards/CardsStyles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Cards/CardsStyles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Icon/patterns/data/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Authorization/Authorization.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Authorization/Authorization.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Profile/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/productActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/productActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/userActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/userActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/productReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/productReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/products.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/products.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/home/user/Public/Graphite/graphite/node_modules/prettier",
     "settings.editor.selected.configurable": "editing.templates",
-    "ts.external.directory.path": "/home/user/Desktop/Graphite/node_modules/typescript/lib"
+    "ts.external.directory.path": "/home/user/Desktop/GitGraphite/Graphite/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="ReactDesignerToolWindowState">
@@ -68,6 +69,7 @@
       <recent name="$PROJECT_DIR$/src/common/Icon/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/services/FormUtils" />
       <recent name="$PROJECT_DIR$/src/common/Icon/patterns/data" />
       <recent name="$PROJECT_DIR$/src/common/Icon/patterns" />
       <recent name="$PROJECT_DIR$/src/components/Modals" />
@@ -98,6 +100,17 @@
       <workItem from="1653546031443" duration="19021000" />
       <workItem from="1653575688571" duration="316000" />
       <workItem from="1653632544853" duration="3384000" />
+      <workItem from="1655363698147" duration="3008000" />
+      <workItem from="1655374692902" duration="5461000" />
+      <workItem from="1655453912129" duration="11963000" />
+      <workItem from="1655705672189" duration="16240000" />
+      <workItem from="1655799076512" duration="9284000" />
+      <workItem from="1655813920001" duration="263000" />
+      <workItem from="1655814527985" duration="4134000" />
+      <workItem from="1655878364600" duration="18585000" />
+      <workItem from="1655968584140" duration="4357000" />
+      <workItem from="1655979921519" duration="3478000" />
+      <workItem from="1656060387176" duration="6663000" />
     </task>
     <servers />
   </component>
@@ -114,17 +127,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/common/Cards/Cards.tsx</url>
-          <line>28</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

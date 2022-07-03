@@ -1,20 +1,31 @@
 import {
   AppointsAction,
   AppointsActionsTypes,
-  AppointsReducer,
+  ProductsReducer,
 } from "../../types/products";
 
-const products: AppointsReducer = {
+const products: ProductsReducer = {
+  isLoading: false,
+  newProducts: [],
+  cart: [],
+  mainResources: [],
   products: [],
   categories: [],
   selectedCategory: {},
+  selectedProduct: {},
 };
 
 export const productsReducer = (
   state = products,
   action: AppointsAction
-): AppointsReducer => {
+): ProductsReducer => {
   switch (action.type) {
+    case AppointsActionsTypes.SET_MAIN_RESOURCES:
+      return {
+        ...state,
+        newProducts: action.payload[0],
+        mainResources: action.payload[1],
+      };
     case AppointsActionsTypes.SET_CATEGORIES:
       return {
         ...state,
@@ -29,6 +40,21 @@ export const productsReducer = (
       return {
         ...state,
         products: action.payload,
+      };
+    case AppointsActionsTypes.SET_CART:
+      return {
+        ...state,
+        cart: action.payload,
+      };
+    case AppointsActionsTypes.SET_PRODUCT:
+      return {
+        ...state,
+        selectedProduct: action.payload,
+      };
+    case AppointsActionsTypes.TOGGLE_LOADER:
+      return {
+        ...state,
+        isLoading: action.payload,
       };
 
     default:

@@ -3,7 +3,7 @@
   height: 100vh;
 }
 body {
-  background: linear-gradient(137deg, rgba(228,231,255,1) 0%, rgba(228,227,255,1) 44%, rgba(228,240,255,1) 100%);
+  background: #fff;
   background-attachment: fixed;
 }
 
